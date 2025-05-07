@@ -9,7 +9,7 @@ key = None
 if "GEMINI_KEY" in st.secrets:
     key = st.secrets['GEMINI_KEY']
 else:
-    os.getenv("GEMINI_KEY")
+    key = os.getenv("GEMINI_KEY")
 
 client = genai.Client(api_key=key)
 

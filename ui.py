@@ -6,10 +6,10 @@ import re
 import os
 
 key = None
-if "gemini_key" in st.secrets:
-    key = st.secrets['gemini_key']
+if "GEMINI_KEY" in st.secrets:
+    key = st.secrets['GEMINI_KEY']
 else:
-    os.getenv("gemini_key")
+    os.getenv("GEMINI_KEY")
 
 client = genai.Client(api_key=key)
 
